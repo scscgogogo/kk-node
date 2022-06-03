@@ -1,3 +1,7 @@
 # complied output
 /dist
 /node_modules
+
+# APP
+
+/src/playground
