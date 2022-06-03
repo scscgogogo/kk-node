@@ -2,5 +2,8 @@
   "name": "kk-node",
   "version": "1.0.0",
   "description": "尝试自己的项目",
-  "author": "sunchao"
+  "author": "sunchao",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
