@@ -3,5 +3,7 @@
 /node_modules
 
 # APP
-
+env*
+config/*.key
+/uploads
 /src/playground

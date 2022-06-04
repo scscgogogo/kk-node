@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/express": "^4.17.3",
     "@types/node": "^17.0.39",
+    "dotenv": "^8.2.0",
     "tsc-watch": "^4.2.3",
     "typescript": "^3.8.3"
   }
