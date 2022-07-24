@@ -1,5 +1,5 @@
 import express from 'express';
-
+import postRounter from '../post/post.router';
 /**
  * 创建应用
  */
@@ -9,6 +9,11 @@ const app = express();
  * 处理 JSON
  */
 app.use(express.json());
+
+/**
+ * 路由
+ */
+app.use(postRounter);
 
 /**
  * 导出应用
