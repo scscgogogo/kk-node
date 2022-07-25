@@ -21,6 +21,9 @@ export const defaultErrorHandler = (
   response: Response,
   next: NextFunction
 ) => {
+  if (error.message) {
+    console.log('🚧', error.message);
+  }
   let statusCode: number, message: string;
 
   /**
