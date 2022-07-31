@@ -12,3 +12,15 @@ export const createUser = async (user: UserModel) => {
   const [data] = await connection.promise().query(statement, user);
   return data;
 };
+
+/**
+ * 按用户名查找用户
+ */
+export const getUserByName = async (name: string) => {
+  const statement = `
+  SELECT * FROM user
+  WHERE name = ?
+  `;
+  const [data] = await connection.promise().query(statement, name);
+  return data[0];
+};
