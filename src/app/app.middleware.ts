@@ -42,6 +42,10 @@ export const defaultErrorHandler = (
       statusCode = 409;
       message = '用户名已存在';
       break;
+    case 'NAME_DOES_NOT_EXIST':
+      statusCode = 400;
+      message = '没有该用户';
+      break;
     default:
       statusCode = 500;
       message = '服务暂时出了点问题 ~~ 🌴';
