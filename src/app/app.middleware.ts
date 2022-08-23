@@ -49,6 +49,9 @@ export const defaultErrorHandler = (
     case 'PASSWORD_NOT_MATCHED':
       statusCode = 400;
       message = '密码不对';
+    case 'UNAUTHORIZED':
+      statusCode = 401;
+      message = '请先登录';
       break;
     default:
       statusCode = 500;
