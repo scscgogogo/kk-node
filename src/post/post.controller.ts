@@ -27,7 +27,9 @@ export const store = async (
 ) => {
   try {
     const { title, content } = request.body;
-    const data = await createPost({ title, content });
+    //准备用户数据
+    const { id: userId } = request.user;
+    const data = await createPost({ title, content, userId });
     response.status(201).send(data);
   } catch (error) {
     next(error);
