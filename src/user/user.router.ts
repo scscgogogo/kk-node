@@ -10,6 +10,11 @@ const router = express.Router();
 router.post('/users', validateUserData, hashPassword, userController.store);
 
 /**
+ * 查找用户
+ */
+router.get('/users/:userId', userController.search);
+
+/**
  * 导出路由
  */
 export default router;

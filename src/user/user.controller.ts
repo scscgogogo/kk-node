@@ -17,3 +17,21 @@ export const store = async (
     next(error);
   }
 };
+
+/**
+ * 查找用户
+ */
+export const search = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  const { userId } = request.params;
+  try {
+    console.log(`${userId}`);
+    const data = await userService.getUserById(parseInt(userId, 10));
+    response.status(200).send(data);
+  } catch (error) {
+    next(error);
+  }
+};
