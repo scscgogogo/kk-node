@@ -16,3 +16,19 @@ export const createFile = async (file: FileModel) => {
 
   return data;
 };
+
+/**
+ * 按ID查找文件
+ */
+export const findFileById = async (fileId: number) => {
+  //准备查询
+  const statement = `
+    SELECT * FROM file
+    WHERE id = ?
+  `;
+
+  //执行查询
+  const [data] = await connection.promise().query(statement, fileId);
+
+  return data[0];
+};
